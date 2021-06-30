@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reserves",
+  "info": {
+    "name": "reserve",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "commentaire": {
+      "type": "text"
+    },
+    "dossier": {
+      "model": "dossier",
+      "via": "reserves"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "reserves"
+    },
+    "rapport": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

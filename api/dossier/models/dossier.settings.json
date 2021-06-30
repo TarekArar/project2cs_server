@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dossiers",
+  "info": {
+    "name": "dossier",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "theme": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "doctorant",
+        "hibiliation"
+      ]
+    },
+    "domaines": {
+      "collection": "domaine",
+      "via": "dossiers",
+      "dominant": true
+    },
+    "files": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "reserves": {
+      "via": "dossier",
+      "collection": "reserve"
+    }
+  }
+}

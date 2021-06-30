@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/dossiers",
+      "handler": "dossier.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dossiers/count",
+      "handler": "dossier.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dossiers/:id",
+      "handler": "dossier.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/dossiers",
+      "handler": "dossier.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/dossiers/:id",
+      "handler": "dossier.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/dossiers/:id",
+      "handler": "dossier.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

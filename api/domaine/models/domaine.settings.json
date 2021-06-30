@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "domaines",
+  "info": {
+    "name": "domaine"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "dossiers": {
+      "via": "domaines",
+      "collection": "dossier"
+    }
+  }
+}
